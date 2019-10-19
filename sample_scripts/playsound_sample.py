@@ -1,2 +1,2 @@
 from playsound import playsound
-playsound('worldholdon_bobsinclair.mp3')
+playsound('tone_220.wav')
