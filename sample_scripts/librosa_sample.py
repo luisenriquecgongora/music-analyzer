@@ -19,7 +19,13 @@ print("ARRAY SAMPLE")
 
 print("Time Series")
 t = np.arange(x.shape[0])/sr
-#print(t)
+
+
+X = librosa.stft(x)
+Xdb = librosa.amplitude_to_db(abs(X))
+plt.figure(figsize=(14, 5))
+librosa.display.specshow(Xdb, sr=sr, x_axis='time', y_axis='hz')
+plt.colorbar()
 
 
 plt.plot(t,x)
